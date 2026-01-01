@@ -1,0 +1,5 @@
+mhmdenv
+/mhmdenv/
+/venv/
+/core/db.sqlite3
+./mhmdenv
