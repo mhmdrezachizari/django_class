@@ -1,0 +1,20 @@
+docker run -d --name postgres_db -e POSTGRES_DB=mydb -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:16
+
+
+
+
+
+docker exec -it postgres_db psql -U myuser -d mydb
+
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "mydb",
+        "USER": "myuser",
+        "PASSWORD": "mypassword",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
